@@ -1,0 +1,113 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.8	//
+A	cpu.c	/^			uint8_t A;$/;"	m	struct:__anon5::__anon6::__anon7	file:	access:public
+B	cpu.c	/^			uint8_t B;$/;"	m	struct:__anon5::__anon6::__anon7	file:	access:public
+BDM	cpu.c	/^				uint8_t BDM[0x00FF];$/;"	m	struct:__anon1::__anon2::__anon3::__anon4	file:	access:public
+CCR	cpu.c	/^	uint8_t CCR;$/;"	m	struct:__anon5	file:	access:public
+CCR	cpu.h	/^uint8_t MEMORY[MEMORY_SIZE], FLASH_EEPROM[FLASH_EEPROM_SIZE], EEPROM_PAGE, CCR;$/;"	v
+CPU_H	cpu.h	2;"	d
+D	cpu.c	/^		uint16_t D;$/;"	m	union:__anon5::__anon6	file:	access:public
+EEPROM	cpu.c	/^		uint8_t EEPROM[EEPROM_SIZE];$/;"	m	struct:__anon1::__anon2	file:	access:public
+EEPROM_OFFSET	cpu.c	6;"	d	file:
+EEPROM_PAGE	cpu.c	/^uint8_t EEPROM_PAGE;$/;"	v
+EEPROM_PAGE	cpu.h	/^uint8_t MEMORY[MEMORY_SIZE], FLASH_EEPROM[FLASH_EEPROM_SIZE], EEPROM_PAGE, CCR;$/;"	v
+EEPROM_SIZE	cpu.c	5;"	d	file:
+EEPROOM_WINDOW	cpu.c	/^		uint8_t EEPROOM_WINDOW[0x3FFF];$/;"	m	struct:__anon1::__anon2	file:	access:public
+FFLASH_WITH_BDM	cpu.c	/^				uint8_t FFLASH_WITH_BDM[0x3F00];$/;"	m	struct:__anon1::__anon2::__anon3::__anon4	file:	access:public
+FIXED_FLASH_3E	cpu.c	/^		uint8_t FIXED_FLASH_3E[0x3FFF];$/;"	m	struct:__anon1::__anon2	file:	access:public
+FIXED_FLASH_3F	cpu.c	/^			uint8_t FIXED_FLASH_3F[0x3FFF];$/;"	m	union:__anon1::__anon2::__anon3	file:	access:public
+FLASH_EEPROM	cpu.h	/^uint8_t MEMORY[MEMORY_SIZE], FLASH_EEPROM[FLASH_EEPROM_SIZE], EEPROM_PAGE, CCR;$/;"	v
+FLASH_EEPROM_OFFSET	cpu.c	10;"	d	file:
+FLASH_EEPROM_OFFSET	cpu.h	6;"	d
+FLASH_EEPROM_SIZE	cpu.c	9;"	d	file:
+FLASH_EEPROM_SIZE	cpu.h	5;"	d
+INCLUDES_H	includes.h	2;"	d
+LAST_3FFF	cpu.c	/^		} LAST_3FFF;$/;"	m	struct:__anon1::__anon2	typeref:union:__anon1::__anon2::__anon3	file:	access:public
+MEMORY	cpu.c	/^	uint8_t MEMORY[MEMORY_SIZE];$/;"	m	union:__anon1	file:	access:public
+MEMORY	cpu.h	/^uint8_t MEMORY[MEMORY_SIZE], FLASH_EEPROM[FLASH_EEPROM_SIZE], EEPROM_PAGE, CCR;$/;"	v
+MEMORY_SIZE	cpu.c	3;"	d	file:
+MEMORY_SIZE	cpu.h	4;"	d
+MMAP	cpu.c	/^} MMAP;$/;"	v	typeref:union:__anon1
+PC	cpu.c	/^	uint16_t X,Y,SP,PC;$/;"	m	struct:__anon5	file:	access:public
+PC	cpu.h	/^uint16_t X, Y, SP, PC;$/;"	v
+RAM	cpu.c	/^		uint8_t RAM[RAM_SIZE];$/;"	m	struct:__anon1::__anon2	file:	access:public
+RAM_OFFSET	cpu.c	8;"	d	file:
+RAM_SIZE	cpu.c	7;"	d	file:
+REGISTERS	cpu.c	/^		uint8_t REGISTERS[REGISTERS_SIZE];$/;"	m	struct:__anon1::__anon2	file:	access:public
+REGISTERS	cpu.c	/^} REGISTERS;$/;"	v	typeref:struct:__anon5
+REGISTERS_SIZE	cpu.c	4;"	d	file:
+SP	cpu.c	/^	uint16_t X,Y,SP,PC;$/;"	m	struct:__anon5	file:	access:public
+SP	cpu.h	/^uint16_t X, Y, SP, PC;$/;"	v
+X	cpu.c	/^	uint16_t X,Y,SP,PC;$/;"	m	struct:__anon5	file:	access:public
+X	cpu.h	/^uint16_t X, Y, SP, PC;$/;"	v
+Y	cpu.c	/^	uint16_t X,Y,SP,PC;$/;"	m	struct:__anon5	file:	access:public
+Y	cpu.h	/^uint16_t X, Y, SP, PC;$/;"	v
+__anon1::MEMORY	cpu.c	/^	uint8_t MEMORY[MEMORY_SIZE];$/;"	m	union:__anon1	file:	access:public
+__anon1::__anon2::EEPROM	cpu.c	/^		uint8_t EEPROM[EEPROM_SIZE];$/;"	m	struct:__anon1::__anon2	file:	access:public
+__anon1::__anon2::EEPROOM_WINDOW	cpu.c	/^		uint8_t EEPROOM_WINDOW[0x3FFF];$/;"	m	struct:__anon1::__anon2	file:	access:public
+__anon1::__anon2::FIXED_FLASH_3E	cpu.c	/^		uint8_t FIXED_FLASH_3E[0x3FFF];$/;"	m	struct:__anon1::__anon2	file:	access:public
+__anon1::__anon2::LAST_3FFF	cpu.c	/^		} LAST_3FFF;$/;"	m	struct:__anon1::__anon2	typeref:union:__anon1::__anon2::__anon3	file:	access:public
+__anon1::__anon2::RAM	cpu.c	/^		uint8_t RAM[RAM_SIZE];$/;"	m	struct:__anon1::__anon2	file:	access:public
+__anon1::__anon2::REGISTERS	cpu.c	/^		uint8_t REGISTERS[REGISTERS_SIZE];$/;"	m	struct:__anon1::__anon2	file:	access:public
+__anon1::__anon2::__anon3::FIXED_FLASH_3F	cpu.c	/^			uint8_t FIXED_FLASH_3F[0x3FFF];$/;"	m	union:__anon1::__anon2::__anon3	file:	access:public
+__anon1::__anon2::__anon3::__anon4::BDM	cpu.c	/^				uint8_t BDM[0x00FF];$/;"	m	struct:__anon1::__anon2::__anon3::__anon4	file:	access:public
+__anon1::__anon2::__anon3::__anon4::FFLASH_WITH_BDM	cpu.c	/^				uint8_t FFLASH_WITH_BDM[0x3F00];$/;"	m	struct:__anon1::__anon2::__anon3::__anon4	file:	access:public
+__anon5::CCR	cpu.c	/^	uint8_t CCR;$/;"	m	struct:__anon5	file:	access:public
+__anon5::PC	cpu.c	/^	uint16_t X,Y,SP,PC;$/;"	m	struct:__anon5	file:	access:public
+__anon5::SP	cpu.c	/^	uint16_t X,Y,SP,PC;$/;"	m	struct:__anon5	file:	access:public
+__anon5::X	cpu.c	/^	uint16_t X,Y,SP,PC;$/;"	m	struct:__anon5	file:	access:public
+__anon5::Y	cpu.c	/^	uint16_t X,Y,SP,PC;$/;"	m	struct:__anon5	file:	access:public
+__anon5::__anon6::D	cpu.c	/^		uint16_t D;$/;"	m	union:__anon5::__anon6	file:	access:public
+__anon5::__anon6::__anon7::A	cpu.c	/^			uint8_t A;$/;"	m	struct:__anon5::__anon6::__anon7	file:	access:public
+__anon5::__anon6::__anon7::B	cpu.c	/^			uint8_t B;$/;"	m	struct:__anon5::__anon6::__anon7	file:	access:public
+_a	instructions/shift.c	/^	uint8_t _a = (ABD.B & 0x80) \/ 0x80;$/;"	v
+exg	instructions/transfer.c	/^void exg(uint8_t *first, uint8_t *second) {$/;"	f	signature:(uint8_t *first, uint8_t *second)
+exg_large	instructions/transfer.c	/^void exg_large(uint16_t *first, uint16_t *second) {$/;"	f	signature:(uint16_t *first, uint16_t *second)
+init	cpu.c	/^void init(void) {$/;"	f	signature:(void)
+init	cpu.h	/^void init(void);$/;"	p	signature:(void)
+ldaa	instructions/load.c	/^void ldaa(uint8_t val) {$/;"	f	signature:(uint8_t val)
+ldaa_mem	instructions/load.c	/^void ldaa_mem(uint16_t offset_pos) {$/;"	f	signature:(uint16_t offset_pos)
+ldab	instructions/load.c	/^void ldab(uint8_t val) {$/;"	f	signature:(uint8_t val)
+ldab_mem	instructions/load.c	/^void ldab_mem(uint16_t offset_pos) {$/;"	f	signature:(uint16_t offset_pos)
+ldd	instructions/load.c	/^void ldd(uint16_t val) {$/;"	f	signature:(uint16_t val)
+ldd_mem	instructions/load.c	/^void ldd_mem(uint16_t offset_pos) {$/;"	f	signature:(uint16_t offset_pos)
+lds	instructions/load.c	/^void lds(uint16_t val) {$/;"	f	signature:(uint16_t val)
+lds_mem	instructions/load.c	/^void lds_mem(uint16_t offset_pos) {$/;"	f	signature:(uint16_t offset_pos)
+ldx	instructions/load.c	/^void ldx(uint16_t val) {$/;"	f	signature:(uint16_t val)
+ldx_mem	instructions/load.c	/^void ldx_mem(uint16_t offset_pos) {$/;"	f	signature:(uint16_t offset_pos)
+ldy	instructions/load.c	/^void ldy(uint16_t val) {$/;"	f	signature:(uint16_t val)
+ldy_mem	instructions/load.c	/^void ldy_mem(uint16_t offset_pos) {$/;"	f	signature:(uint16_t offset_pos)
+loadprog	loadprogram.c	/^void loadprog(char *fname) {$/;"	f	signature:(char *fname)
+lsl	instructions/shift.c	/^void lsl(uint8_t pos) {$/;"	f	signature:(uint8_t pos)
+lsla	instructions/shift.c	/^void lsla(void) {$/;"	f	signature:(void)
+lslb	instructions/shift.c	/^void lslb(void) {$/;"	f	signature:(void)
+lsld	instructions/shift.c	/^void lsld(void) {$/;"	f	signature:(void)
+lsr	instructions/shift.c	/^void lsr(uint8_t pos) {$/;"	f	signature:(uint8_t pos)
+lsra	instructions/shift.c	/^void lsra(void) {$/;"	f	signature:(void)
+main	asm/a.c	/^void main(void) {$/;"	f	signature:(void)
+main	asm/a.s	/^main:$/;"	l
+movb	instructions/move.c	/^void movb(uint8_t pos1, uint8_t pos2) {$/;"	f	signature:(uint8_t pos1, uint8_t pos2)
+movw	instructions/move.c	/^void movw(uint8_t pos1, uint8_t pos2) {$/;"	f	signature:(uint8_t pos1, uint8_t pos2)
+sex	instructions/transfer.c	/^void sex(uint8_t *from, uint16_t *to) {$/;"	f	signature:(uint8_t *from, uint16_t *to)
+staa	instructions/store.c	/^void staa(uint16_t position) {$/;"	f	signature:(uint16_t position)
+stab	instructions/store.c	/^void stab(uint16_t position) {$/;"	f	signature:(uint16_t position)
+std	instructions/store.c	/^void std(uint16_t position) {$/;"	f	signature:(uint16_t position)
+sts	instructions/store.c	/^void sts(uint16_t position) {$/;"	f	signature:(uint16_t position)
+stx	instructions/store.c	/^void stx(uint16_t position) {$/;"	f	signature:(uint16_t position)
+sty	instructions/store.c	/^void sty(uint16_t position) {$/;"	f	signature:(uint16_t position)
+tab	instructions/transfer.c	/^void tab(void) {$/;"	f	signature:(void)
+tap	instructions/transfer.c	/^void tap(void) {$/;"	f	signature:(void)
+tba	instructions/transfer.c	/^void tba(void) {$/;"	f	signature:(void)
+tfr	instructions/transfer.c	/^void tfr(uint8_t *from, uint8_t *to) {$/;"	f	signature:(uint8_t *from, uint8_t *to)
+tfr_large	instructions/transfer.c	/^void tfr_large(uint16_t *from, uint16_t *to) {$/;"	f	signature:(uint16_t *from, uint16_t *to)
+tpa	instructions/transfer.c	/^void tpa(void) {$/;"	f	signature:(void)
+tsx	instructions/transfer.c	/^void tsx(void) {$/;"	f	signature:(void)
+tsy	instructions/transfer.c	/^void tsy(void) {$/;"	f	signature:(void)
+txs	instructions/transfer.c	/^void txs(void) {$/;"	f	signature:(void)
+tys	instructions/transfer.c	/^void tys(void) {$/;"	f	signature:(void)
+xgdx	instructions/transfer.c	/^void xgdx(void) {$/;"	f	signature:(void)
+xgdy	instructions/transfer.c	/^void xgdy(void) {$/;"	f	signature:(void)
