@@ -4,5 +4,6 @@
 #include <stdlib.h>
 #include <stdint.h>
 #include <locale.h>
+#include <sys/mman.h>
 #include <curses.h>
 #endif

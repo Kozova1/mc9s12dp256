@@ -10,6 +10,7 @@
 #define FLASH_EEPROM_SIZE 262144
 
 uint8_t EEPROM_PAGE;
+uint8_t CURRENT_EEPROM_PAGE[0x3FFF];
 uint8_t FLASH_EEPROM[FLASH_EEPROM_SIZE];
 union {
 	struct {
