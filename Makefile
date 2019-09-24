@@ -1,5 +1,5 @@
 CC=gcc
-CFLAGS=-I -Wall
+CFLAGS=-I -Wall -lncurses
 
 ifeq ($(PREFIX),)
     PREFIX := /usr/local
@@ -11,7 +11,7 @@ DEPS=cpu.h includes.h
 	$(CC) -c -o $@ $< $(CFLAGS)
 
 cpu12emu: *.c *.h
-	$(CC) -o mc9s12dp256-emu main.c cpu.c loadprogram.c set.c instructions/*
+	$(CC) -o mc9s12dp256-emu main.c cpu.c loadprogram.c set.c instructions/* debug/*
 
 .PHONY: clean install uninstall
 
