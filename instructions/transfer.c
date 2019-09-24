@@ -1,7 +1,11 @@
 #include "../cpu.h"
+#include "../set.h"
 
 void tab(void) {
 	REGISTERS.B = REGISTERS.A;
+	unset('v');
+	REGISTERS.B ? unset('z') : set('z');
+	(REGISTERS.B & 0x80) ? set('n'): unset('n');
 }
 
 void tap(void) {
@@ -10,12 +14,17 @@ void tap(void) {
 
 void tba(void) {
 	REGISTERS.A = REGISTERS.B;
+	unset('v');
+	REGISTERS.B ? unset('z') : set('z');
+	(REGISTERS.B & 0x80) ? set('n'): unset('n');
 }
 
+// No intention to implement set()/unset() for this
 void tfr(uint8_t *from, uint8_t *to) {
 	*to = *from;
 }
 
+// No intention to implement set()/unset() for this
 void tfr_large(uint16_t *from, uint16_t *to) {
 	*to = *from;
 }

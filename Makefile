@@ -11,7 +11,7 @@ DEPS=cpu.h includes.h
 	$(CC) -c -o $@ $< $(CFLAGS)
 
 cpu12emu: *.c *.h
-	$(CC) -o mc9s12dp256-emu main.c cpu.c loadprogram.c instructions/*
+	$(CC) -o mc9s12dp256-emu main.c cpu.c loadprogram.c set.c instructions/*
 
 .PHONY: clean install uninstall
 
