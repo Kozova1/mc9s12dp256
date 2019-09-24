@@ -18,7 +18,7 @@ union {
 		uint8_t EEPROM[EEPROM_SIZE];
 		uint8_t RAM[RAM_SIZE];
 		uint8_t FIXED_FLASH_3E[0x3FFF];
-		uint8_t EEPROOM_WINDOW[0x3FFF];
+		uint8_t EEPROM_WINDOW[0x3FFF];
 		union {
 			struct {
 				uint8_t FFLASH_WITH_BDM[0x3F00];
