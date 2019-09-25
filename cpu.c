@@ -1,7 +1,7 @@
 #include "includes.h"
 
 // verify memory size since it seems to be wrong
-#define MEMORY_SIZE 65536
+#define MEMORY_SIZE 66559
 #define REGISTERS_SIZE 0x03FF
 #define EEPROM_SIZE 0x0FFF
 #define EEPROM_OFFSET 0x0000

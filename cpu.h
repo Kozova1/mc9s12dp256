@@ -1,7 +1,7 @@
 #ifndef CPU_H
 #define CPU_H
 #include "includes.h"
-#define MEMORY_SIZE 65536
+#define MEMORY_SIZE 66559
 #define REGISTERS_SIZE 0x03FF
 #define EEPROM_SIZE 0x0FFF
 #define EEPROM_OFFSET 0x0000
