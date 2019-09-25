@@ -11,7 +11,11 @@ DEPS=cpu.h includes.h
 	$(CC) -c -o $@ $< $(CFLAGS)
 
 cpu12emu: *.c *.h
-	$(CC) $(CFLAGS) -o mc9s12dp256-emu main.c cpu.c loadprogram.c set.c mount_eeprom.c instructions/*
+	$(CC) $(CFLAGS) -o mc9s12dp256-emu main.c cpu.c set.c mount_eeprom.c instructions/*.c
+
+header-update:
+	echo "" > instructions_includes.h
+	 find ./instructions/ -type f -exec echo "#include \"{}\"" \; | grep "\.h" > instructions_includes.h
 
 .PHONY: clean install uninstall
 
