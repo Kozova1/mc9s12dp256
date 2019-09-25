@@ -1,4 +1,5 @@
 #include "cpu.h"
+// easy way to set a specific bit in the CCR
 void set(char which) {
 	switch(which) {
 		case 'c':

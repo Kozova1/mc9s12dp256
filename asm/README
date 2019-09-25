@@ -1,0 +1,4 @@
+In this directory we need to find out how the binary file is built.
+*.s files: assembly files
+*.out files: binary file
+*.dump files: hexdump of *.out

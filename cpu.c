@@ -1,4 +1,10 @@
 #include "includes.h"
+/* This file exists to emulate the CPU by emulating:
+ * Memory
+ * Registers
+ * EEPROM and Flash EEPROM
+ * it also contains a zeroing function
+ */
 
 // verify memory size since it seems to be wrong
 #define MEMORY_SIZE 66559

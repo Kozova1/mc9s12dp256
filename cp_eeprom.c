@@ -2,6 +2,8 @@
 #include "includes.h"
 #include "set.h"
 
+// To be removed soonish
+
 int eeprom_to_memory(void) {
 	// experimental
 	int *a = (int*)memcpy(MMAP.EEPROM_WINDOW,

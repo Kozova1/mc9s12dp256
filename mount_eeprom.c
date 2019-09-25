@@ -1,6 +1,10 @@
 #include "includes.h"
 #include "cpu.h"
 
+/* Here we handle saving the Flash EEPROM to a file
+ * and then mmap(3) it to its respective memory window (Page)
+ */
+
 void save_eeprom_to_file(void) {
 	// save EEPROM to file and return it
 	FLASH_EEPROM_FILE = fopen("/tmp/eeprom", "wb+");
