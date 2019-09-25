@@ -1,10 +1,41 @@
 #include "cpu.h"
+#include "set.h"
+#include "includes.h"
+#include "mount_eeprom.h"
 
-void init_sequence(void) {
+int init_sequence(void) {
 	init();
+	save_eeprom_to_file();
+	int fd = fileno(FLASH_EEPROM_FILE);
+	// mapping the 3E fixed flash as required
+	int *result1 = mmap(MMAP.FIXED_FLASH_3E,
+						sizeof(uint8_t) * 0x3FFF,
+						PROT_READ | PROT_WRITE,
+						MAP_PRIVATE,
+						fd,
+						sizeof(uint8_t) * 0x43FD);
+	// mapping the 3F fixed flash as required
+	int *result2 = mmap(MMAP.FIXED_FLASH_3F,
+						sizeof(uint8_t) * 0x3FFF,
+						PROT_READ | PROT_WRITE,
+						MAP_PRIVATE,
+						fd,
+						sizeof(uint8_t) * 0xC3FB);
+
+	if (result1 == MAP_FAILED || result2 == MAP_FAILED) {
+		return 2;
+	}
+
+	if (map_eeprom() == -1) {
+		return 1;
+	}
+	return 0;
 }
 
 int main(int argc, char *argv[]) {
-	init_sequence();
+	int excode = init_sequence();
+	if (excode != 0) {
+		return excode;
+	}
 	return 0;
 }

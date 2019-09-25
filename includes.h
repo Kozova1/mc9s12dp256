@@ -6,5 +6,6 @@
 #include <string.h>
 #include <locale.h>
 #include <sys/mman.h>
+#include <unistd.h>
 #include <curses.h>
 #endif

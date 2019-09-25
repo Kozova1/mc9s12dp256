@@ -10,22 +10,18 @@
 #define FLASH_EEPROM_SIZE 262144
 
 uint8_t EEPROM_PAGE;
+FILE *FLASH_EEPROM_FILE;
 uint8_t CURRENT_EEPROM_PAGE[0x3FFF];
 uint8_t FLASH_EEPROM[FLASH_EEPROM_SIZE];
+
 union {
 	struct {
-		uint8_t REGISTERS[REGISTERS_SIZE];
-		uint8_t EEPROM[EEPROM_SIZE];
-		uint8_t RAM[RAM_SIZE];
-		uint8_t FIXED_FLASH_3E[0x3FFF];
+		uint8_t FIXED_FLASH_3F[0x3FFF];
 		uint8_t EEPROM_WINDOW[0x3FFF];
-		union {
-			struct {
-				uint8_t FFLASH_WITH_BDM[0x3F00];
-				uint8_t BDM[0x00FF];
-			};
-			uint8_t FIXED_FLASH_3F[0x3FFF];
-		} LAST_3FFF;
+		uint8_t FIXED_FLASH_3E[0x3FFF];
+		uint8_t RAM[RAM_SIZE];
+		uint8_t EEPROM[EEPROM_SIZE];
+		uint8_t REGISTERS[REGISTERS_SIZE];
 	};
 	uint8_t MEMORY[MEMORY_SIZE];
 } MMAP;
@@ -39,6 +35,7 @@ struct {
 		uint16_t D;
 	};
 	uint8_t CCR;
+	uint8_t PPAGE;
 	uint16_t X,Y,SP,PC;
 } REGISTERS;
 

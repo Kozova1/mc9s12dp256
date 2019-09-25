@@ -1,5 +1,6 @@
 #include "includes.h"
 
+// verify memory size since it seems to be wrong
 #define MEMORY_SIZE 65536
 #define REGISTERS_SIZE 0x03FF
 #define EEPROM_SIZE 0x0FFF
@@ -8,7 +9,7 @@
 #define RAM_OFFSET 0x1000
 #define FLASH_EEPROM_SIZE 262144
 
-uint8_t EEPROM_PAGE;
+FILE *FLASH_EEPROM_FILE;
 uint8_t FLASH_EEPROM[FLASH_EEPROM_SIZE];
 union {
 	struct {
@@ -33,6 +34,7 @@ struct {
 		uint16_t D;
 	};
 	uint8_t CCR;
+	uint8_t PPAGE;
 	uint16_t X,Y,SP,PC;
 } REGISTERS;
 
