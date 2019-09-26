@@ -5,17 +5,17 @@
  * and then mmap(3) it to its respective memory window (Page)
  */
 
-void save_eeprom_to_file(void) {
-	// save EEPROM to file and return it
-	FLASH_EEPROM_FILE = fopen("/tmp/eeprom", "wb+");
-	fwrite(FLASH_EEPROM,
-		   sizeof(uint8_t),
-		   sizeof(uint8_t) * FLASH_EEPROM_SIZE,
-		   FLASH_EEPROM_FILE);
+int set_eeprom_file(void) {
+	// read EEPROM from file to array
+	int fd = open("/tmp/eeprom", O_CREAT | O_RDWR, 00644);
+	FLASH_EEPROM_FILE = fdopen(fd, "rb+");
+	if (FLASH_EEPROM_FILE == NULL)
+		return 50;
+	return 0;
 }
 
 int map_eeprom(void) {
-	// Load EEPROM from previously saved file to memory
+	// Map file to memory (instead of array)
 	// convert c to file descriptor
 	int fd = fileno(FLASH_EEPROM_FILE);
 	//actually mapping the file to memory

@@ -24,11 +24,6 @@ void tfr(uint8_t *from, uint8_t *to) {
 	*to = *from;
 }
 
-// No intention to implement set()/unset() for this
-void tfr_large(uint16_t *from, uint16_t *to) {
-	*to = *from;
-}
-
 void tpa(void) {
 	REGISTERS.A = REGISTERS.CCR;
 }

@@ -4,7 +4,7 @@
 #include "includes.h"
 #include "cpu.h"
 
-void save_eeprom_to_file(void);
+int set_eeprom_file(void);
 
 int map_eeprom(void);
 

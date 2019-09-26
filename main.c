@@ -12,7 +12,7 @@ int end_sequence(int to_ret) {
 int init_sequence(void) {
 	init();
 	// Saving the EEPROM to a file so that we can map it to memory
-	save_eeprom_to_file();
+	set_eeprom_file();
 	// Getting the file descriptor for said file
 	int fd = fileno(FLASH_EEPROM_FILE);
 	// mapping the 3E fixed flash as required
