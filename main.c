@@ -5,7 +5,7 @@
 
 int end_sequence(int to_ret) {
 	unmap_eeprom();
-	fclose(FLASH_EEPROM_FILE);
+	close_file();
 	return to_ret;
 }
 
@@ -34,7 +34,9 @@ int init_sequence(void) {
 		return 2;
 	}
 
-	if (map_eeprom() == -1) {
+	if (page_result_cmp(page(REGISTERS.PPAGE),
+						(struct page_result){.unmap_result = -1,
+											 .map_result = 10})) {
 		return 1;
 	}
 	return 0;

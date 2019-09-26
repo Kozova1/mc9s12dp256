@@ -47,10 +47,15 @@ void init(void) {
 	{
 		MMAP.MEMORY[i] = 0;
 	}
+	for (int i = 0; i < FLASH_EEPROM_SIZE; i++)
+	{
+		FLASH_EEPROM[i] = 0;
+	}
 	REGISTERS.CCR = 0;
 	REGISTERS.D = 0;
 	REGISTERS.X = 0;
 	REGISTERS.Y = 0;
 	REGISTERS.SP = 0;
 	REGISTERS.PC = 0xBFFE; //TODO -> validate actual value
+	REGISTERS.PPAGE = 0x30;
 }

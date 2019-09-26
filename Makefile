@@ -1,12 +1,14 @@
 CC=gcc
-CFLAGS=-I -Wall -lncurses -O2
+LIBFLAGS=-lncurses
+WARNING=-Wall -Wno-unused-variable
+CFLAGS=-I ${WARNING} ${LIBFLAGS} -O2
 
 ifeq ($(PREFIX),)
     PREFIX := /usr/local
 endif
 
 cpu12emu: *.c *.h
-	$(CC) $(CFLAGS) -o mc9s12dp256-emu main.c cpu.c set.c mount_eeprom.c instructions/*.c
+	$(CC) ${CFLAGS} -o mc9s12dp256-emu main.c cpu.c set.c mount_eeprom.c instructions/*.c
 
 .PHONY: clean install uninstall header-update
 
