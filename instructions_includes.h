@@ -4,6 +4,7 @@
 #include "./instructions/multiply.h"
 #include "./instructions/substract.h"
 #include "./instructions/shift.h"
+#include "./instructions/rotate.h"
 #include "./instructions/or.h"
 #include "./instructions/test.h"
 #include "./instructions/store.h"

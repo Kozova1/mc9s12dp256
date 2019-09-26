@@ -3,6 +3,12 @@
 #include "includes.h"
 #include "mount_eeprom.h"
 
+int end_sequence(int to_ret) {
+	unmap_eeprom();
+	fclose(FLASH_EEPROM_FILE);
+	return to_ret;
+}
+
 int init_sequence(void) {
 	init();
 	// Saving the EEPROM to a file so that we can map it to memory
@@ -37,7 +43,7 @@ int init_sequence(void) {
 int main(int argc, char *argv[]) {
 	int excode = init_sequence();
 	if (excode != 0) {
-		return excode;
+		return end_sequence(excode);
 	}
-	return 0;
+	return end_sequence(0);
 }

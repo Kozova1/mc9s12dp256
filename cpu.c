@@ -29,8 +29,6 @@ union {
 	uint8_t MEMORY[MEMORY_SIZE];
 } MMAP;
 
-uint8_t *EEPROM_POS = &MMAP.MEMORY[0x3FFF];
-
 struct {
 	union {
 		struct {
