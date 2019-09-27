@@ -4,8 +4,7 @@
 void tab(void);
 void tap(void);
 void tba(void);
-void tfr(uint8_t *from, uint8_t *to);
-void tfr_large(uint16_t *from, uint16_t *to);
+void tfr(void *from, void *to);
 void tpa(void);
 void tsx(void);
 void tsy(void);

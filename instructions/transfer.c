@@ -19,9 +19,31 @@ void tba(void) {
 	(REGISTERS.B & 0x80) ? set('n'): unset('n');
 }
 
-// No intention to implement set()/unset() for this
-void tfr(uint8_t *from, uint8_t *to) {
-	*to = *from;
+void tfr(void *from, void *to) {
+	if ((to != &REGISTERS.A) && (from != &REGISTERS.A)
+		&& (to != &REGISTERS.B) && (from != &REGISTERS.B)
+		&& (to != &REGISTERS.CCR) && (from != &REGISTERS.CCR)) {
+
+		*(uint16_t*)(to) = *(uint16_t*)(from);
+		if (*(uint16_t*)(to) & 0x8000)
+			set('n');
+		else
+			unset('n');
+		if (*(uint16_t*)(to))
+			unset('z');
+		else
+			set('z');
+	} else {
+		*(uint8_t*)(to) = *(uint8_t*)(from);
+		if (*(uint8_t*)(to) & 0x80)
+			set('n');
+		else
+			unset('n');
+		if (*(uint8_t*)(to))
+			unset('z');
+		else
+			set('z');
+	}
 }
 
 void tpa(void) {
