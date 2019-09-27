@@ -35,14 +35,16 @@ void tfr(void *from, void *to) {
 			set('z');
 	} else {
 		*(uint8_t*)(to) = *(uint8_t*)(from);
-		if (*(uint8_t*)(to) & 0x80)
-			set('n');
-		else
-			unset('n');
-		if (*(uint8_t*)(to))
-			unset('z');
-		else
-			set('z');
+		if ((to != &REGISTERS.CCR) && (from != &REGISTERS.CCR)) {
+			if (*(uint8_t*)(to) & 0x80)
+				set('n');
+			else
+				unset('n');
+			if (*(uint8_t*)(to))
+				unset('z');
+			else
+				set('z');
+		}
 	}
 }
 
