@@ -6,6 +6,7 @@
 #include "./instructions/store.h"
 #include "./instructions/subroutine.h"
 #include "./instructions/rotate.h"
+#include "./instructions/branch.h"
 #include "./instructions/negate.h"
 #include "./instructions/load.h"
 #include "./instructions/test.h"

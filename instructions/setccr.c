@@ -16,3 +16,15 @@ void sev(void) {
 void andcc(uint8_t val) {
 	REGISTERS.CCR &= val;
 }
+
+void clv(void) {
+	unset('b');
+}
+
+void cli(void) {
+	unset('i');
+}
+
+void clc(void) {
+	unset('c');
+}

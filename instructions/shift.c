@@ -89,3 +89,7 @@ void asrb(void) {
 	(_a & 0x80) ? set('n') : unset('n');
 	_a ? unset('z') : set('z');
 }
+
+void asld(void) {
+	lsld();
+}

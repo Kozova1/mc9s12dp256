@@ -12,4 +12,5 @@ void lsrd(void);
 void asr(uint16_t pos);
 void asra(void);
 void asrb(void);
+void asld(void);
 #endif
