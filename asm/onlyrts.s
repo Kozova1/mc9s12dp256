@@ -1,2 +1,1 @@
-main:
-	rts
+stop

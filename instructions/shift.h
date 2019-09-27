@@ -9,4 +9,7 @@ void lsr(uint16_t pos);
 void lsra(void);
 void lsrb(void);
 void lsrd(void);
+void asr(uint16_t pos);
+void asra(void);
+void asrb(void);
 #endif

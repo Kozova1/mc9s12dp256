@@ -1,3 +1,4 @@
+#include "./instructions/subroutine.h"
 #include "./instructions/transfer.h"
 #include "./instructions/negate.h"
 #include "./instructions/load.h"

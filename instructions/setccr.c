@@ -12,3 +12,7 @@ void sei(void) {
 void sev(void) {
 	set('v');
 }
+
+void andcc(uint8_t val) {
+	REGISTERS.CCR &= val;
+}
