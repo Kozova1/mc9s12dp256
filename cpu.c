@@ -29,6 +29,15 @@ union {
 	uint8_t MEMORY[MEMORY_SIZE];
 } MMAP;
 
+struct Memory {
+	uint8_t imm;
+	uint16_t imm_ext;
+	uint16_t pos;
+	char type;
+};
+
+typedef struct Memory Memory;
+
 struct {
 	union {
 		struct {
@@ -58,4 +67,11 @@ void init(void) {
 	REGISTERS.SP = 0;
 	REGISTERS.PC = 0xBFFE; //TODO -> validate actual value
 	REGISTERS.PPAGE = 0x30;
+}
+
+int isimm(Memory mem) {
+	if (mem.type == 'i')
+		return 1;
+	else
+		return 0;
 }

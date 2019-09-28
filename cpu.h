@@ -26,6 +26,15 @@ union {
 	uint8_t MEMORY[MEMORY_SIZE];
 } MMAP;
 
+struct Memory {
+	uint8_t imm;
+	uint16_t imm_ext;
+	uint16_t pos;
+	char type;
+};
+
+typedef struct Memory Memory;
+
 struct {
 	union {
 		struct {
@@ -40,5 +49,6 @@ struct {
 } REGISTERS;
 
 void init(void);
+int isimm(Memory mem);
 
 #endif

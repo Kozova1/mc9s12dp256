@@ -1,7 +1,8 @@
 #ifndef TEST_H
 #define TEST_H
 #include "../includes.h"
-void tst(uint16_t pos);
+#include "../cpu.h"
+void tst(Memory mem);
 void tsta(void);
 void tstb(void);
 #endif

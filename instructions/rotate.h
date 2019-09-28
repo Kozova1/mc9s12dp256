@@ -4,7 +4,7 @@
 #include "../cpu.h"
 #include "../set.h"
 
-void rol(uint16_t pos);
-void ror(uint16_t pos);
+void rol(Memory mem);
+void ror(Memory mem);
 
 #endif

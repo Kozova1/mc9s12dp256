@@ -1,11 +1,11 @@
 #include "../cpu.h"
 #include "../set.h"
 
-void tst(uint16_t pos) {
+void tst(Memory mem) {
 	unset('c');
 	unset('v');
-	*(MMAP.MEMORY + pos) ? unset('z') : set('z');
-	(*(MMAP.MEMORY + pos) & 0x80) ? set('n') : unset('n');
+	*(MMAP.MEMORY + mem.pos) ? unset('z') : set('z');
+	(*(MMAP.MEMORY + mem.pos) & 0x80) ? set('n') : unset('n');
 }
 
 void tsta(void) {

@@ -13,8 +13,8 @@ void sev(void) {
 	set('v');
 }
 
-void andcc(uint8_t val) {
-	REGISTERS.CCR &= val;
+void andcc(Memory mem) {
+	REGISTERS.CCR &= mem.imm;
 }
 
 void clv(void) {

@@ -1,7 +1,8 @@
 #ifndef OR_H
 #define OR_H
 #include "../includes.h"
-void oraa(uint8_t to_or);
-void orab(uint8_t to_or);
-void orcc(uint8_t to_or);
+#include "../cpu.h"
+void oraa(Memory mem);
+void orab(Memory mem);
+void orcc(Memory mem);
 #endif

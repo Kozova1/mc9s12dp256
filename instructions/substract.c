@@ -9,43 +9,38 @@ void sba(void) {
 	REGISTERS.A = REGISTERS.A - REGISTERS.B;
 }
 
-void suba(uint8_t to_sub) {
-	(REGISTERS.A == to_sub) ? unset('z') : set('z');
-	(to_sub > REGISTERS.A) ? set('n') : unset('n');
-	(to_sub > REGISTERS.A) ? set('v') : unset('v');
-	(to_sub > REGISTERS.A) ? set('c') : unset('c');
-	REGISTERS.A = REGISTERS.A - to_sub;
+void suba(Memory mem) {
+	if (isimm(mem)) {
+		(REGISTERS.A == mem.imm) ? unset('z') : set('z');
+		(mem.imm > REGISTERS.A) ? set('n'), set('v'), set('c'): unset('n'), unset('v'), unset('c');
+		REGISTERS.A = REGISTERS.A - mem.imm;
+	} else {
+		(REGISTERS.A == *(MMAP.MEMORY + mem.pos)) ? unset('z') : set('z');
+		(mem.imm > REGISTERS.A) ? set('n'), set('v'), set('c'): unset('n'), unset('v'), unset('c');
+		REGISTERS.A = REGISTERS.A - *(MMAP.MEMORY + mem.pos);
+	}
 }
 
-void suba_mem(uint16_t pos) {
-	(REGISTERS.A == *(MMAP.MEMORY + pos)) ? unset('z') : set('z');
-	(*(MMAP.MEMORY + pos) > REGISTERS.A) ? set('n') : unset('n');
-	(*(MMAP.MEMORY + pos) > REGISTERS.A) ? set('v') : unset('v');
-	(*(MMAP.MEMORY + pos) > REGISTERS.A) ? set('c') : unset('c');
-	REGISTERS.A = REGISTERS.A - *(MMAP.MEMORY + pos);
+void subb(Memory mem) {
+	if (isimm(mem)) {
+		(REGISTERS.B == mem.imm) ? unset('z') : set('z');
+		(mem.imm > REGISTERS.B) ? set('n'), set('v'), set('c'): unset('n'), unset('v'), unset('c');
+		REGISTERS.B = REGISTERS.B - mem.imm;
+	} else {
+		(REGISTERS.B == *(MMAP.MEMORY + mem.pos)) ? unset('z') : set('z');
+		(mem.imm > REGISTERS.B) ? set('n'), set('v'), set('c'): unset('n'), unset('v'), unset('c');
+		REGISTERS.B = REGISTERS.B - *(MMAP.MEMORY + mem.pos);
+	}
 }
 
-void subb(uint8_t to_sub) {
-	(REGISTERS.B == to_sub) ? unset('z') : set('z');
-	(to_sub > REGISTERS.B) ? set('n') : unset('n');
-	(to_sub > REGISTERS.B) ? set('v') : unset('v');
-	(to_sub > REGISTERS.B) ? set('c') : unset('c');
-	REGISTERS.B = REGISTERS.B - to_sub;
+void subd(Memory mem) {
+	if (isimm(mem)) {
+		(REGISTERS.D == mem.imm_ext) ? unset('z') : set('z');
+		(mem.imm_ext > REGISTERS.D) ? set('n'), set('v'), set('c'): unset('n'), unset('v'), unset('c');
+		REGISTERS.D = REGISTERS.D - mem.imm_ext;
+	} else {
+		(REGISTERS.B == *(MMAP.MEMORY + mem.pos)) ? unset('z') : set('z');
+		(mem.imm > REGISTERS.B) ? set('n'), set('v'), set('c'): unset('n'), unset('v'), unset('c');
+		REGISTERS.B = REGISTERS.B - *(MMAP.MEMORY + mem.pos);
+	}
 }
-
-void subb_mem(uint16_t pos) {
-	(REGISTERS.B == *(MMAP.MEMORY + pos)) ? unset('z') : set('z');
-	(*(MMAP.MEMORY + pos) > REGISTERS.B) ? set('n') : unset('n');
-	(*(MMAP.MEMORY + pos) > REGISTERS.B) ? set('v') : unset('v');
-	(*(MMAP.MEMORY + pos) > REGISTERS.B) ? set('c') : unset('c');
-	REGISTERS.B = REGISTERS.B - *(MMAP.MEMORY + pos);
-}
-
-void subd(uint16_t to_sub) {
-	(REGISTERS.D == to_sub) ? unset('z') : set('z');
-	(to_sub > REGISTERS.D) ? set('n') : unset('n');
-	(to_sub > REGISTERS.D) ? set('v') : unset('v');
-	(to_sub > REGISTERS.D) ? set('c') : unset('c');
-	REGISTERS.D = REGISTERS.D - to_sub;
-}
-// TODO -> subd_mem
