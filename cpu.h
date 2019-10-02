@@ -30,6 +30,8 @@ struct Memory {
 	uint8_t imm;
 	uint16_t imm_ext;
 	uint16_t pos;
+	uint8_t *reg;
+	uint16_t *reg_ext;
 	char type;
 };
 
