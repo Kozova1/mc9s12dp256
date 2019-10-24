@@ -45,7 +45,19 @@ struct {
 		};
 		uint16_t D;
 	};
-	uint8_t CCR;
+	union {
+		struct {
+			uint8_t c : 1;
+			uint8_t v : 1;
+			uint8_t z : 1;
+			uint8_t n : 1;
+			uint8_t i : 1;
+			uint8_t h : 1;
+			uint8_t x : 1;
+			uint8_t s : 1;
+		};
+		uint8_t CCR;	
+	};
 	uint8_t PPAGE;
 	uint16_t X,Y,SP,PC;
 } REGISTERS;

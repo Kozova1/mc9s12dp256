@@ -80,7 +80,7 @@ void bra(uint16_t pos) {
 }
 
 void brn(uint16_t pos) {
-
+	return;
 }
 
 // TODO -> brset, brclr, bsr

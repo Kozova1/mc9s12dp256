@@ -1,6 +1,6 @@
+#include "includes.h"
 #include "cpu.h"
 #include "set.h"
-#include "includes.h"
 #include "mount_eeprom.h"
 
 int end_sequence(int to_ret) {
